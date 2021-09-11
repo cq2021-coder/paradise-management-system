@@ -1,0 +1,26 @@
+package com.cq.paradisemanagement.exception;
+
+public enum BusinessExceptionCode {
+
+    USER_LOGIN_NAME_EXIST("登录名已存在"),
+    LOGIN_USER_ERROR("用户名不存在或密码错误"),
+    RESET_USER_ERROR("用户名不存在"),
+    VOTE_REPEAT("您已点赞过"),
+    TOKEN_NULL("无令牌，请重新登录"),
+    TOKEN_VERIFY_ERROR("令牌验证错误！"),
+    ;
+
+    private String desc;
+
+    BusinessExceptionCode(String desc) {
+        this.desc = desc;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
+}
